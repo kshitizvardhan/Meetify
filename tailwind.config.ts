@@ -27,6 +27,7 @@ const config = {
         },
         blue: {
           1: '#0E78F9',
+          2: '#7C3AED',
         },
         sky: {
           1: '#C9DDFF',
@@ -59,6 +60,9 @@ const config = {
       },
       backgroundImage: {
         hero: "url('/images/hero-background.png')",
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
