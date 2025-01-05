@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "@/components/ui/toaster";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -36,7 +37,7 @@ export default function RootLayout({
     }}>
       <html lang="en">
         <body
-          className={`${poppins.variable} ${poppins.variable} antialiased bg-dark-2 `}
+          className={`${poppins.variable} ${poppins.variable} antialiased bg-dark-2 font-poppins`}
         >
           {children}
           <Toaster />
