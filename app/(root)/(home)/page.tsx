@@ -1,14 +1,46 @@
 "use client";
 import MeetingTypeList from '@/components/MeetingTypeList';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Home = () => {
-  const now = new Date();
+  // State for time and date
+  const [time, setTime] = useState('');
+  const [period, setPeriod] = useState('');
+  const [date, setDate] = useState('');
 
-  const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  const [time, period] = timeString.split(' ');
-  const date = new Intl.DateTimeFormat('en-IN', { dateStyle: 'full' }).format(now);
+  // Use client-side rendering to get the user's local time
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+
+      // Get time and period
+      const timeString = now.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+      });
+      const [currentTime, currentPeriod] = timeString.split(' ');
+
+      // Get date
+      const currentDate = new Intl.DateTimeFormat('en-IN', {
+        dateStyle: 'full',
+      }).format(now);
+
+      // Update state
+      setTime(currentTime);
+      setPeriod(currentPeriod);
+      setDate(currentDate);
+    };
+
+    // Update time immediately
+    updateTime();
+
+    // Update time every minute
+    const timer = setInterval(updateTime, 60000);
+
+    // Cleanup
+    return () => clearInterval(timer);
+  }, []);
 
   const Noise = () => {
     return (
