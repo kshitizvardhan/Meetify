@@ -117,8 +117,8 @@ export const ModalBody = ({
     }
   }, [open]);
 
-  const modalRef = useRef<HTMLDivElement | null>(null); // Explicitly typing it
-
+  const modalRef = useRef<HTMLDivElement>(null);
+  
   useOutsideClick(modalRef, () => setOpen(false));
 
   return (
