@@ -1,6 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 * {
   margin: 0;
@@ -9,6 +11,16 @@
 }
 
 /* ======== stream css overrides ======== */
+.str-video {
+  --str-video__primary-color: #7C3AED !important;
+  --str-video__secondary-color: #1C1F2E !important ;
+  --str-video__text-color1: #ffffff;
+  --str-video__border-radius-circle: 15px;
+}
+
+.str-video__device-settings{
+  font-family: 'Poppins' !important;
+}
 .str-video__call-stats {
   max-width: 500px;
   position: relative;
@@ -39,7 +51,9 @@
 }
 
 .str-video__call-controls__button {
+  
   height: 40px;
+  padding: 20px;
 }
 
 .glassmorphism {
