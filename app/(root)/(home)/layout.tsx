@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
+import Footer from '@/components/Footer'
 
 const Homelayout = ({children} : {children : ReactNode}) => {
   return (
@@ -15,7 +16,7 @@ const Homelayout = ({children} : {children : ReactNode}) => {
                 </div>
             </section>
         </div>
-        
+        <Footer/>
     </main>
   )
 }

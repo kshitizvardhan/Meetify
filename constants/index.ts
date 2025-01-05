@@ -34,3 +34,21 @@ export const sidebarLinks = [
     '/images/avatar-4.png',
     '/images/avatar-5.png',
   ];
+
+  export const socialMedia = [
+    {
+      id: 1,
+      img: "/icons/github.svg",
+      link: "https://github.com/kshitizvardhan"
+    },
+    {
+      id: 2,
+      img: "/icons/twit.svg",
+      link: "https://x.com/kshitiz_vardhan"
+    },
+    {
+      id: 3,
+      img: "/icons/link.svg",
+      link: "https://www.linkedin.com/in/kshitiz-vardhan/"
+    },
+  ];
