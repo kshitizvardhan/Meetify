@@ -28,7 +28,7 @@ const Home = () => {
         <Noise />
         <div className="relative z-10 flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
           <h2 className="glassmorphism max-w-[273px] rounded py-2 text-center text-base font-normal">
-            Connect | Collaborate | Communicate
+            Fast | Secure | Reliable
           </h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-extrabold lg:text-6xl">
