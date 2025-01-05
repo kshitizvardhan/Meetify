@@ -10,6 +10,77 @@
   box-sizing: border-box;
 }
 
+.react-datepicker{
+  font-family: "Poppins" !important;
+  font-size: .8rem;
+  background-color: #252A41 !important;
+  border: none !important;
+  border-radius: .3rem;
+  display: inline-block;
+  position: relative;
+  line-height: initial;
+}
+.react-datepicker__header{
+  background-color: #252A41 !important;
+  height: 58px !important;
+}
+
+.react-datepicker__header--has-time-select, .react-datepicker__header--time{
+  border: none !important;
+}
+
+.react-datepicker__time-list-item {
+  background-color: #252A41 !important;
+}
+
+.react-datepicker__current-month, .react-datepicker__day, .react-datepicker__day-name, .react-datepicker-time__header, .react-datepicker__time-list-item {
+  color: white !important;
+}
+
+.react-datepicker__day:not([aria-disabled="true"]):hover, .react-datepicker__month-text:not([aria-disabled="true"]):hover, .react-datepicker__quarter-text:not([aria-disabled="true"]):hover, .react-datepicker__year-text:not([aria-disabled="true"]):hover{
+  background-color: #7C3AED !important;
+}
+
+/* .react-datepicker__time-container, .react-datepicker__time, .react-datepicker__time-box, .react-datepicker__time-list{
+  overflow: hidden !important;
+}  */
+/* Target the scrollbars for the datepicker time components */
+.react-datepicker__time-container, 
+.react-datepicker__time, 
+.react-datepicker__time-box, 
+.react-datepicker__time-list {
+  scrollbar-width: thin !important; /* For Firefox */
+  scrollbar-color: #d3d3d3 transparent !important; /* For Firefox */
+}
+
+/* For WebKit-based browsers (Chrome, Safari, Edge) */
+.react-datepicker__time-container::-webkit-scrollbar,
+.react-datepicker__time::-webkit-scrollbar,
+.react-datepicker__time-box::-webkit-scrollbar,
+.react-datepicker__time-list::-webkit-scrollbar {
+  width: 6px !important; /* Make scrollbar thinner */
+}
+
+.react-datepicker__time-container::-webkit-scrollbar-thumb,
+.react-datepicker__time::-webkit-scrollbar-thumb,
+.react-datepicker__time-box::-webkit-scrollbar-thumb,
+.react-datepicker__time-list::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3 !important; /* Light gray color */
+  border-radius: 10px !important; /* Rounded scrollbar */
+}
+
+.react-datepicker__time-container::-webkit-scrollbar-track,
+.react-datepicker__time::-webkit-scrollbar-track,
+.react-datepicker__time-box::-webkit-scrollbar-track,
+.react-datepicker__time-list::-webkit-scrollbar-track {
+  background-color: transparent !important; /* Transparent track */
+}
+
+.react-datepicker__time-container::-webkit-scrollbar-thumb:hover {
+  background-color: #b0b0b0 !important;
+}
+
+
 /* ======== stream css overrides ======== */
 .str-video {
   --str-video__primary-color: #7C3AED !important;
