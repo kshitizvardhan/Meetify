@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import HomeCard from "./HomeCard";
 import { useRouter } from "next/navigation";
 import MeetingModal from "./MeetingModal";
@@ -69,11 +69,6 @@ const MeetingTypeList = () => {
       toast({title: "Failed to create meeting", variant:"destructive"})
     }
   };
-
-  // // Effect to log meeting state changes
-  // useEffect(() => {
-  //   console.log("Meeting State changed:", meetingState);
-  // }, [meetingState]);
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`;
 

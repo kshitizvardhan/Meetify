@@ -1,5 +1,5 @@
 import MeetingTypeList from '@/components/MeetingTypeList';
-import { WobbleCard } from '@/components/ui/wobble-card';
+
 import React from 'react';
 
 const Home = () => {

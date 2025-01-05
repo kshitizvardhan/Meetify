@@ -114,7 +114,7 @@ const SVG = ({
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",
-            delay: Math.floor(Math.random() * 10),
+            delay: Math.floor(Math.random() * 2),
             repeatDelay: Math.floor(Math.random() * 10 + 2),
           }}
           key={`path-first-${idx}`}

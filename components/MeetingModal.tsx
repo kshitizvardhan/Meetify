@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from './ui/animated-modal'
+import { Modal, ModalBody, ModalContent, ModalFooter } from './ui/animated-modal'
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';

@@ -19,17 +19,6 @@ interface MeetingCardProps {
   link: string;
 }
 
-const Noise = () => {
-  return (
-    <div
-      className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 rounded-[14px] pointer-events-none"
-      style={{
-        backgroundImage: "url(/noise.webp)",
-        backgroundSize: "30%",
-      }}
-    ></div>
-  );
-};
 
 const MeetingCard = ({
   icon,
