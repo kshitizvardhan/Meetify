@@ -1,37 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meetify 🎥
 
-## Getting Started
+Welcome to Meetify, a modern video calling application built using Next.js and WebRTC. 
+This project focuses on real-time communication, providing users with personal meeting rooms and a seamless video calling experience. 
+By developing this project, I explored WebRTC and various protocols, gaining valuable insights into peer-to-peer connections, media transmission, and building low-latency applications.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://github.com/user-attachments/assets/dc512f18-cfd2-46cd-b733-41ff7f6de363
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Concepts Learned
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🌐 WebRTC (Web Real-Time Communication)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Peer-to-Peer Connections:**
+  Direct communication between users without relying on a central server, reducing latency and improving call quality.
 
-## Learn More
+- **Signaling:**
+  Implemented a signaling server using Next.js API routes to exchange session descriptions (SDP) and ICE candidates between peers.
 
-To learn more about Next.js, take a look at the following resources:
+- **ICE (Interactive Connectivity Establishment):**
+  Learned how ICE finds the best possible connection path between peers by gathering candidates (public, private, and relay addresses).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **STUN/TURN Servers:**
+  - **STUN (Session Traversal Utilities for NAT):** Helps clients discover their public IP addresses and establish direct peer-to-peer connections.
+  - **TURN (Traversal Using Relays around NAT):** Acts as a relay server to route data if direct connections fail (used for handling restrictive firewalls).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **SRTP (Secure Real-time Transport Protocol):**
+  Ensured secure media transmission by encrypting audio and video streams.
 
-## Deploy on Vercel
+- **DTLS (Datagram Transport Layer Security):**
+  Established secure connections over WebRTC using DTLS for key exchange and encryption.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **MediaStream API:**
+  Accessed the user's camera and microphone to capture media streams and transmit them over the network.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Meetify
+- **Data Channels:**
+  Explored WebRTC data channels to enable real-time text-based messaging during video calls.
+
+---
+
+## 📲 Connection Flow
+1. **Signaling:**
+   Exchange session descriptions (SDP) and ICE candidates between peers.
+
+2. **ICE Candidate Gathering:**
+   Discover the best route for the connection using STUN/TURN servers.
+
+3. **Connection Establishment:**
+   Create a peer connection using SRTP and DTLS protocols over UDP.
+
+4. **Media/Stream Handling:**
+   Transmit audio/video streams between connected peers.
+
+---
+
+Thank you for exploring Meetify! This project deepened my understanding of WebRTC and real-time communication protocols, enabling me to build dynamic and interactive web applications with low-latency video calls. 🚀
