@@ -1,6 +1,6 @@
 # Meetify 🎥
 
-- Welcome to Meetify, a modern video calling application built using Next.js and WebRTC. 
+- Welcome to Meetify, a modern video calling application built using Next.js 15 and WebRTC. 
 - This project focuses on real-time communication, providing users with personal meeting rooms and a seamless video calling experience. 
 - By developing this project, I explored WebRTC and various protocols, gaining valuable insights into peer-to-peer connections, media transmission, and building low-latency applications.
 
